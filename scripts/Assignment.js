@@ -79,3 +79,13 @@ else{
     alert("Try number between 1 and 10.")
 }
 
+// Task 4:
+/*Create a program that asks the user to enter a name, and then prints out the name
+with the first letter capitalized (Make sure your name in capitalized case).*/
+
+var name = +prompt("Enter your name in block or capital letters.");
+var result = name.CharAt(0).toUpperrCase() + name.slice(1); //error
+alert(result)
+
+
+
