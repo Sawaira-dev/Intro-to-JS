@@ -87,5 +87,41 @@ var name = +prompt("Enter your name in block or capital letters.");
 var result = name.CharAt(0).toUpperrCase() + name.slice(1); //error
 alert(result)
 
+// Task 5:
+/*In this task, you will be creating two empty arrays called "contactNumbers" and
+"contactNames". Using the prompt, you will ask the user to enter a contact number
+and contact name. You will then push these values into their respective arrays
+using the push method. After adding all the contacts, you will display the contact
+numbers and names in the console. To do this, you will need to use a for loop to
+iterate through both arrays and log each element to the console.
+Make sure to use descriptive variable names and comment on your code for clarity.*/
 
+// var contactNames = [""];
+// var contactNumbers = [""];
+// var inputName = prompt("Please enter your name.");
+// var inputNumber = prompt("Please enter your contact number.");
+// contactNames.push(inputName);
+// contactNames.push(inputNumber);
+// console.log(contactNames, contactNumbers);
+
+const contactNumbers = [];
+const contactNames = [];
+
+for (let i = 0; i < numberOfContacts; i++) {
+  let phoneNumber = prompt("Enter a contact number: ");
+  let name = prompt("Enter a contact name: ");
+
+  contactNumbers.push(phoneNumber);
+  contactNames.push(name);
+}
+
+console.log("Contact Numbers:");
+for (let i = 0; i < contactNumbers.length; i++) {
+  console.log(contactNumbers[i]);
+}
+
+console.log("Contact Names:");
+for (let i = 0; i < contactNames.length; i++) {
+  console.log(contactNames[i]);
+}
 
