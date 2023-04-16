@@ -131,13 +131,11 @@ ask your user to give the position of that element he/she wants. Now remove that
 from your array and console the removed item, Also display the remaining items in the
 array and total number of items remaining.*/
 
+
 var products = [' Rabit pair',' Duck pair',' Peacock pair',' Parrot pair '];
 var Inputproduct = +prompt("For purchasing Rabit pair press '1', Duck pair '2', Peacock pair '3', Parrot pair '4'");
-if(Inputproduct == 1){
-    products.shift();
-    alert("Remaining Prodicts: " +products + " & Number of remaining Products: "+ products.length);
-}
-else if(Inputproduct == 2 || Inputproduct == 3 || Inputproduct == 4){
+
+if(Inputproduct ==1 || Inputproduct < 5){
 
     var removedProduct = products.splice(Inputproduct-1, 1);
     alert("Remaining Prodicts: " +products + " & Number of remaining Products: "+ products.length);
