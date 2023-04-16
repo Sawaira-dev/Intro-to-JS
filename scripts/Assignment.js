@@ -96,32 +96,55 @@ numbers and names in the console. To do this, you will need to use a for loop to
 iterate through both arrays and log each element to the console.
 Make sure to use descriptive variable names and comment on your code for clarity.*/
 
-// var contactNames = [""];
-// var contactNumbers = [""];
-// var inputName = prompt("Please enter your name.");
-// var inputNumber = prompt("Please enter your contact number.");
-// contactNames.push(inputName);
-// contactNames.push(inputNumber);
-// console.log(contactNames, contactNumbers);
+// empty arrays
+var contactNumbers = [];
+var contactNames = [];
 
-const contactNumbers = [];
-const contactNames = [];
+//number of inputs
+var numberOfContacts =2;
 
+// for loop to run prompt for numberOfContacts
 for (let i = 0; i < numberOfContacts; i++) {
-  let phoneNumber = prompt("Enter a contact number: ");
-  let name = prompt("Enter a contact name: ");
+  var InputNumber = prompt("Enter a contact number: ");
+  let InputName = prompt("Enter a contact name: ");
 
-  contactNumbers.push(phoneNumber);
-  contactNames.push(name);
+  //put input of prompt in array
+  contactNumbers.push(InputNumber);
+  contactNames.push(InputName);
 }
 
 console.log("Contact Numbers:");
+// for loop to display all contactNumbers input arrays of numberOfContacts
 for (let i = 0; i < contactNumbers.length; i++) {
   console.log(contactNumbers[i]);
 }
 
 console.log("Contact Names:");
+// for loop to display all contactNames input arrays of numberOfContacts
 for (let i = 0; i < contactNames.length; i++) {
   console.log(contactNames[i]);
 }
+
+// Task 6:
+/*Create an Array that contains different products, and get input from the user in which you
+ask your user to give the position of that element he/she wants. Now remove that Item
+from your array and console the removed item, Also display the remaining items in the
+array and total number of items remaining.*/
+
+var products = [' Rabit pair',' Duck pair',' Peacock pair',' Parrot pair '];
+var Inputproduct = +prompt("For purchasing Rabit pair press '1', Duck pair '2', Peacock pair '3', Parrot pair '4'");
+if(Inputproduct == 1){
+    products.shift();
+    alert("Remaining Prodicts: " +products + " & Number of remaining Products: "+ products.length);
+}
+else if(Inputproduct == 2 || Inputproduct == 3 || Inputproduct == 4){
+
+    var removedProduct = products.splice(Inputproduct-1, 1);
+    alert("Remaining Prodicts: " +products + " & Number of remaining Products: "+ products.length);
+}
+else{
+    alert("Invalid input");
+}
+
+
 
