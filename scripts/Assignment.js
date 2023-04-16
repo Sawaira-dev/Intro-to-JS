@@ -163,12 +163,12 @@ if (inputNation == 'Pakistan' || inputNation == 'Pakistani' || inputNation == 'P
     alert("You are eligible to vote! click 'Ok' to proceed further:")
     var inputGender = prompt("Please enter your gender Male or Female:");
     var inputAge = +prompt("Please enter your age:");
-    if (inputGender == 'male'||'men'||'Male'||'Men'||'MALE'||'MEN' && inputAge >= 19){
+    if (inputGender == ('male'||'men'||'Male'||'Men'||'MALE'||'MEN') && inputAge >= 19){
         alert("You are eligible to vote!");
     }
-    else if(inputGender == 'female'||'Female'||'FeMale'||'feMale'||'FEMALE' && inputAge >= 19){
+    else if(inputGender == ('female'||'Female'||'FeMale'||'feMale'||'FEMALE') && inputAge >= 19){
         var maritalStatus = prompt("Are you married? Yes or No");
-        if(maritalStatus == 'Yes'||'yes'||'YES'){
+        if(maritalStatus == 'yes' || maritalStatus == 'Yes' || maritalStatus == 'YES'){
             alert("You are eligible to vote");
         }
         else{
@@ -185,4 +185,18 @@ else{
     alert("For eligibility your nationality must b Pakistani or Indian")
 }
 
+// Task 8:
+/*You have an array of that contains the name of Pakistani Teams Player selected for
+WorldCup (15 Players) named as WorldCupSquad. Now tomorrow we have a match with
+India, So make an array of final team players (11 Players) that will be playing in tomorrows
+match from the WorldCupSquad array.
+(Hint : Make sure it should not disturb the array that contains 15 players instead you have
+to make a copy of this array)*/
 
+var WorldCupSquad = ['Babar azam', 'Shoaib Akhtar','Shadab', 'Azhar Ali', 'M.Rizwaan','Haris Sohail', 'Shaeen Afridi', 'Imran Hashmi', 'Umer Akmal', 'M.Amir','Ahmed Shehzaad', 'Sarfaraz Ahmed', 'Imad Waseem', 'M.Harris', 'Hassan Ali'];
+var finalplayers = WorldCupSquad;
+
+var removedPlayers = finalplayers.splice(Math.floor((Math.random()*15)), 11);
+console.log("Final Players selected from worldcupSquad for tomorrow's Match with India are:");
+console.log(removedPlayers);
+console.log(WorldCupSquad);
