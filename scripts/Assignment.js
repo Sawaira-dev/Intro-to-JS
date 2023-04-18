@@ -83,9 +83,11 @@ else{
 /*Create a program that asks the user to enter a name, and then prints out the name
 with the first letter capitalized (Make sure your name in capitalized case).*/
 
-var name = +prompt("Enter your name in block or capital letters.");
-var result = name.CharAt(0).toUpperrCase() + name.slice(1); //error
-alert(result)
+var name = prompt("Enter your name in block or capital letters.");
+// name= name.toLowerCase();
+// name =name.CharAt(0)
+var Name = name.CharAt(0).toUpperrCase() + name.slice(1); //error
+alert(Name);
 
 // Task 5:
 /*In this task, you will be creating two empty arrays called "contactNumbers" and
@@ -194,9 +196,22 @@ match from the WorldCupSquad array.
 to make a copy of this array)*/
 
 var WorldCupSquad = ['Babar azam', 'Shoaib Akhtar','Shadab', 'Azhar Ali', 'M.Rizwaan','Haris Sohail', 'Shaeen Afridi', 'Imran Hashmi', 'Umer Akmal', 'M.Amir','Ahmed Shehzaad', 'Sarfaraz Ahmed', 'Imad Waseem', 'M.Harris', 'Hassan Ali'];
-var finalplayers = WorldCupSquad;
+var finalplayers = WorldCupSquad.slice(0,15);
 
+console.log("WorldCupSquad:");
+console.log(WorldCupSquad);
+//random 11 players selection from copied array of finalplayers (15 players)
 var removedPlayers = finalplayers.splice(Math.floor((Math.random()*15)), 11);
+
 console.log("Final Players selected from worldcupSquad for tomorrow's Match with India are:");
 console.log(removedPlayers);
-console.log(WorldCupSquad);
+
+///////////////////OR///////////////////
+
+var WorldcupSquad = ['Babar azam', 'Shoaib Akhtar','Shadab', 'Azhar Ali', 'M.Rizwaan','Haris Sohail', 'Shaeen Afridi', 'Imran Hashmi', 'Umer Akmal', 'M.Amir','Ahmed Shehzaad', 'Sarfaraz Ahmed', 'Imad Waseem', 'M.Harris', 'Hassan Ali'];
+//copied 11 array items
+var finalplayer = WorldCupSquad.slice(0,11);
+
+console.log("No.Of WorldCupSquad : " + WorldcupSquad.length + " Squad Players: " + WorldcupSquad);
+console.log("No.Of Final selected Players: "+ finalplayer.length + " Final Selected Players: " +finalplayer);
+
