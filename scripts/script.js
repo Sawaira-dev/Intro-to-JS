@@ -28,6 +28,59 @@
 // SaweraRasheed PascalCase
 // sawera_rasheed snake_case
 
+
+///////////////////////////
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form onsubmit="getUser(event)">
+      <select name="conversion" id="conversion">
+        <option value="degtoRad">Degree to Radian</option>
+        <option value="radtoDeg">Radian to degree</option>
+      </select>
+
+      <input type="text" id="userinput" name="userinput" />
+      <input type="submit" value="get number" />
+    </form>
+
+    <input type="text" id="output" />
+
+    <script>
+      function getUser(a) {
+        a.preventDefault();
+        var conversion = document.getElementById("conversion").value;
+        console.log(conversion);
+        var userinput = document.getElementById("userinput").value;
+        var result;
+
+        switch (conversion) {
+          case "degtoRad":
+            result = userinput * (Math.PI / 180);
+            break;
+
+          case "radtoDeg":
+            result = userinput * (180 / Math.PI);
+            break;
+
+          default:
+            break;
+        }
+
+        document.getElementById("output").value = result;
+      }
+    </script>
+  </body>
+</html>
+
+
+
 // console.log(2+5)
 // console.log(2-5)
 // console.log(2*5)
